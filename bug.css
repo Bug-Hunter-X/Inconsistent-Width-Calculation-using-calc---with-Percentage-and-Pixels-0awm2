@@ -1,0 +1,11 @@
+The following CSS code snippet demonstrates an unusual issue related to unexpected behavior when combining `calc()` and `%` units within the same property:
+
+```css
+.container {
+  width: calc(50% + 20px);
+}
+```
+
+This code intends to set the width of the `.container` element to 50% of its parent's width plus an additional 20 pixels. However, the result might be inconsistent or unexpected across different browsers or contexts, as the calculation might not be handled perfectly.
+
+The unexpected behavior might arise if the parent element doesn't have a definite width defined, as the calculation involves a percentage, making it dependent on the parent's size. This can cause layout instability or unexpected rendering results.
