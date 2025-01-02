@@ -1,0 +1,21 @@
+To solve the potential issues highlighted in the `bug.css` file, it's crucial to ensure that the parent element's width is explicitly defined or avoid the dependence on percentage-based calculations.  The following demonstrates a solution:
+
+```css
+.parent {
+  width: 500px; /* Explicitly define the parent's width */
+}
+
+.container {
+  width: calc(50% + 20px);
+}
+```
+
+Alternatively, if you want the width to be a combination of relative and absolute units but do not want to depend on the parent element's width, use only fixed values:
+
+```css
+.container {
+  width: 270px; /* Fixed width for consistent result */
+}
+```
+
+By explicitly setting the parent's width or using a consistent fixed width, you can avoid any inconsistent behavior in the width calculation of `.container`. Remember to always test across different browsers and scenarios to guarantee consistent results.
